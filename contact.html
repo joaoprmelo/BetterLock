@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps API Example</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5CQfzO4OFBTahRibpOGn21jYHUTaC-Sg&callback=initMap" 
+          async defer></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <h1>Entre em contato!</h1>
+    <p>Tel: +123456789</p>
+    <p>Email: nós@geradordesenhas.com</p>
+
+    <hr />
+    <p>Endereço:</p>
+    <p>
+      Recife - Graças <br />
+      Brasil <br />
+    </p>
+    <div id="map"></div>
+  </body>
+  <script>
+    function initMap() {
+      var uninassauLatLng = {lat: -8.051795, lng: -34.902105};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: uninassauLatLng
+      });
+      var marker = new google.maps.Marker({
+        position: uninassauLatLng,
+        map: map,
+        title: 'Uninassau Graças, Bloco A, Recife, Pernambuco'
+      });
+    }
+  </script>
+</head>
+
+</html>
+
+
